@@ -1,0 +1,21 @@
+// Heavily based on https://github.com/upmem/dpu_demo/blob/sdk-2023.2/checksum/common/common.h
+
+#define XSTR(x) STR(x)
+#define STR(x) #x
+
+#define DPU_RESULTS dpu_results
+
+#include <stdint.h>
+
+typedef struct {
+    uint32_t cycles_xs32;
+    uint32_t cycles_mt32;
+    uint32_t cycles_sc32;
+    uint32_t cycles_lm32;
+    uint32_t clocks_per_sec;
+} dpu_tasklet_result_t;
+
+typedef struct {
+    dpu_tasklet_result_t tasklet_results[NR_TASKLETS];
+} dpu_results_t;
+
