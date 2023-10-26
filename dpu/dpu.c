@@ -5,7 +5,7 @@
 #include "../includes/rng.c"
 #include "../includes/results.h"
 
-#define N 1e4
+#define N 1e7
 
 __host dpu_results_t DPU_RESULTS;
 
