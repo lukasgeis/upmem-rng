@@ -25,10 +25,10 @@ int main() {
     for (unsigned int each_tasklet = 0; each_tasklet < NR_TASKLETS; each_tasklet++) {
       dpu_tasklet_result_t *result = &results[each_dpu].tasklet_results[each_tasklet];
 
-      printf("%u,%u,%u,%.2e,xs32\n", each_dpu, each_tasklet, result->cycles_xs32, (double)result->cycles_xs32 / result->clocks_per_sec);
-      printf("%u,%u,%u,%.2e,mt32\n", each_dpu, each_tasklet, result->cycles_mt32, (double)result->cycles_mt32 / result->clocks_per_sec);
-      printf("%u,%u,%u,%.2e,sc32\n", each_dpu, each_tasklet, result->cycles_sc32, (double)result->cycles_sc32 / result->clocks_per_sec);
-      printf("%u,%u,%u,%.2e,lm32\n", each_dpu, each_tasklet, result->cycles_lm32, (double)result->cycles_lm32 / result->clocks_per_sec);
+      printf("%u,%u,%lu,%.2e,xs32\n", each_dpu, each_tasklet, result->cycles_xs32, (double)result->cycles_xs32 / result->clocks_per_sec);
+      printf("%u,%u,%lu,%.2e,mt32\n", each_dpu, each_tasklet, result->cycles_mt32, (double)result->cycles_mt32 / result->clocks_per_sec);
+      printf("%u,%u,%lu,%.2e,sc32\n", each_dpu, each_tasklet, result->cycles_sc32, (double)result->cycles_sc32 / result->clocks_per_sec);
+      printf("%u,%u,%lu,%.2e,lm32\n", each_dpu, each_tasklet, result->cycles_lm32, (double)result->cycles_lm32 / result->clocks_per_sec);
     }
   }
 
