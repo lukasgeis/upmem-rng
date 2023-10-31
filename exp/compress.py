@@ -4,16 +4,26 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dpu_depth", type = int, default = 4)
     parser.add_argument("task_depth", type = int, default = 4)
+    parser.add_argument('--dlinear', default=False, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--tlinear', default=False, action=argparse.BooleanOptionalAction)
     parser.add_argument('--full', default=False, action=argparse.BooleanOptionalAction)
 
     args = parser.parse_args()
 
     print("DPUS,TASKS,CYCLES,TIME,ALGORITHM")
 
-    for dpu_exp in range(args.dpu_depth + 1):
-        for task_exp in range(args.task_depth + 1):
-            nr_dpus = 1 << dpu_exp
-            nr_task = 1 << task_exp
+    dpus = [i for i in range(args.dpu_depth + 1)]
+    if not args.dlinear:
+        dpus = [1 << i for i in dpus]
+    
+    tasks = [i for i in range(args.task_depth + 1)]
+    if not args.tlinear:
+        tasks = [1 << i for i in tasks]
+
+    for nr_dpus in dpus:
+        for nr_task in tasks:
+            if nr_dpus == 0 or nr_task == 0:
+                continue
 
             file = "data/out_dpus_{}_tasklets_{}.csv".format(nr_dpus, nr_task)
             with open(file, "r") as data:
