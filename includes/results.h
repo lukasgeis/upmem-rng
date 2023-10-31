@@ -8,11 +8,11 @@
 #include <stdint.h>
 
 typedef struct {
-    uint32_t cycles_xs32;
-    uint32_t cycles_mt32;
-    uint32_t cycles_sc32;
-    uint32_t cycles_lm32;
-    uint32_t clocks_per_sec;
+    uint64_t cycles_xs32;
+    uint64_t cycles_mt32;
+    uint64_t cycles_sc32;
+    uint64_t cycles_lm32;
+    uint64_t clocks_per_sec;
 } dpu_tasklet_result_t;
 
 typedef struct {

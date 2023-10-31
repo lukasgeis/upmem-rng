@@ -14,7 +14,7 @@ int main() {
     uint32_t seed = tasklet_id;
     dpu_tasklet_result_t *result = &DPU_RESULTS.tasklet_results[tasklet_id];
 
-    uint32_t num_cycles;
+    uint64_t num_cycles;
 
     if (tasklet_id == 0) {
         perfcounter_config(COUNT_CYCLES, true);
