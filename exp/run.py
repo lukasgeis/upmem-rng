@@ -3,8 +3,7 @@ import argparse
 
 MAKE_CMD = "NR_DPUS=X NR_TASKLETS=Y make all"
 RUN_CMD = "./bin/host > X"
-COMPRESS_CMD = "python3 exp/compress.py X Y > Z"
-COMPRESS_FULL_CMD = "python3 exp/compress.py X Y --full > Z"
+COMPRESS_CMD = "python3 exp/compress.py X Y A B > Z"
 
 def main():
     parser = argparse.ArgumentParser()
@@ -57,16 +56,17 @@ def main():
             "Z", "data/exp_{}_{}.csv".format(args.dpu_depth, args.task_depth)
         )
 
-        compress_full = COMPRESS_FULL_CMD.replace(
-            "X", str(args.dpu_depth)
-        ).replace(
-            "Y", str(args.task_depth)
-        ).replace(
-            "Z", "data/exp_{}_{}_full.csv".format(args.dpu_depth, args.task_depth)
-        )
+        if args.dlinear:
+            compress = compress.replace("A", "--dlinear")
+        else:
+            compress = compress.replace("A", "")
+        
+        if args.tlinear:
+            compress = compress.replace("B", "--tlinear")
+        else:
+            compress = compress.replace("B", "")
 
         os.system(compress)
-        os.system(compress_full)
 
     if args.cleanup:
         cleanup = "rm -r data/out*"
