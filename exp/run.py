@@ -18,7 +18,7 @@ def main():
 
     out = "data/out_dpus_{}_tasklets_{}.csv".format(args.dpu_depth, args.task_depth)
 
-    os.system("echo 'NRDPU,NRTASKLET,DPU,TASKLET,CYCLES,TIME,RNG' > X".replace("X", out));
+    os.system("echo 'nr_dpu,nr_tasklet,dpu_id,tasklet_id,cycles,time,algorithm' > X".replace("X", out));
 
     try: 
         os.mkdir("data")
