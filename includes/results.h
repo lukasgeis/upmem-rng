@@ -8,6 +8,7 @@
 #include <stdint.h>
 
 typedef struct {
+    uint64_t cycles_null;
     uint64_t cycles_xs32;
     uint64_t cycles_mt32;
     uint64_t cycles_sc32;
@@ -15,10 +16,7 @@ typedef struct {
     uint64_t clocks_per_sec;
 
     // Prevent Compiler-Optimization in `../dpu/dpu.c`
-    uint32_t fval_xs32;
-    uint32_t fval_mt32;
-    uint32_t fval_sc32;
-    uint32_t fval_lm32;
+    uint32_t dummy;
 } dpu_tasklet_result_t;
 
 typedef struct {
