@@ -1,7 +1,7 @@
 #include <dpu.h>
 #include <stdio.h>
 
-#include "../includes/results.h"
+#include "../../includes/results.h"
 
 #define DPU_BINARY "./bin/dpu"
 

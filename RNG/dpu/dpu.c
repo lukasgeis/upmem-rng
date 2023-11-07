@@ -3,8 +3,8 @@
 #include <perfcounter.h>
 #include <stdio.h>
 
-#include "../includes/rng.c"
-#include "../includes/results.h"
+#include "../../includes/rng.c"
+#include "../../includes/results.h"
 
 __host dpu_results_t DPU_RESULTS;
 

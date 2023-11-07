@@ -3,8 +3,8 @@
 
 #include <omp.h>
 
-#include "../includes/rng.c"
-#include "../includes/results.h"
+#include "../../includes/rng.c"
+#include "../../includes/results.h"
 
 int main() {
     dpu_results_t DPU_RESULTS;

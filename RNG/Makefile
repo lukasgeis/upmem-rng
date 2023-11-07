@@ -15,7 +15,7 @@ HOST_TARGET := ${BUILDDIR}/host
 DPU_TARGET := ${BUILDDIR}/dpu
 CPU_TARGET := ${BUILDDIR}/cpu
 
-COMMON_INCLUDES := includes
+COMMON_INCLUDES := ../includes
 HOST_SOURCES := $(wildcard ${HOST_DIR}/*.c)
 DPU_SOURCES := $(wildcard ${DPU_DIR}/*.c)
 CPU_SOURCES := $(wildcard ${CPU_DIR}/*.c)
