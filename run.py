@@ -1,7 +1,7 @@
 import os
 import argparse
 
-N = "1e5"
+N = "1e7"
 
 MAKE_CMD = "NR_DPUS=X NR_TASKLETS=Y N={} make dpu".format(N)
 CPU_MAKE_CMD = "NR_TASKLETS=X N={} make cpu".format(N)
