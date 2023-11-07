@@ -6,8 +6,6 @@
 #include "../includes/rng.c"
 #include "../includes/results.h"
 
-#define N 1e7
-
 __host dpu_results_t DPU_RESULTS;
 
 BARRIER_INIT(my_barrier, NR_TASKLETS);
@@ -70,6 +68,25 @@ int main() {
     }
 
     result->cycles_lm32 = perfcounter_get() - num_cycles;
+    num_cycles = perfcounter_get();
+
+    struct pcg32 rng_pcg32 = seed_pcg32(seed);
+
+    for (int i = 0; i < N; i++) {
+        dummy ^= gen_pcg32(&rng_pcg32);    
+    }
+
+    result->cycles_pcg32 = perfcounter_get() - num_cycles;
+    num_cycles = perfcounter_get();
+
+    struct cha32 rng_cha32 = seed_cha32(seed);
+
+    for (int i = 0; i < N; i++) {
+        dummy ^= gen_cha32(&rng_cha32);    
+    }
+
+    result->cycles_cha32 = perfcounter_get() - num_cycles;
+
 
     result->clocks_per_sec = CLOCKS_PER_SEC;
 

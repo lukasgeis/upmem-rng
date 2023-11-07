@@ -13,6 +13,8 @@ typedef struct {
     uint64_t cycles_mt32;
     uint64_t cycles_sc32;
     uint64_t cycles_lm32;
+    uint64_t cycles_pcg32;
+    uint64_t cycles_cha32;
     uint64_t clocks_per_sec;
 
     // Prevent Compiler-Optimization in `../dpu/dpu.c`
