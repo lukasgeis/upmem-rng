@@ -1,20 +1,23 @@
 #include <barrier.h>
 #include <defs.h>
 #include <perfcounter.h>
-#include <stdio.h>
 
 #include "../../includes/rng.c"
 #include "../../includes/results.h"
 
-__host dpu_results_t DPU_RESULTS;
+#ifndef N
+#define N 1e7
+#endif
+
+__host rng_dpu_result DPU_RESULTS;
 
 BARRIER_INIT(my_barrier, NR_TASKLETS);
 
 int main() {
     uint32_t tasklet_id = me();
-    uint32_t seed = tasklet_id;
+    uint32_t seed = tasklet_id + 1;
     uint32_t dummy = 0;
-    dpu_tasklet_result_t *result = &DPU_RESULTS.tasklet_results[tasklet_id];
+    rng_tasklet_result *result = &DPU_RESULTS.tasklet_results[tasklet_id];
 
     uint64_t num_cycles;
 
@@ -30,7 +33,7 @@ int main() {
         dummy ^= i;
     }
 
-    result->cycles_null = perfcounter_get() - num_cycles;
+    result->cycles_loop = perfcounter_get() - num_cycles;
     num_cycles = perfcounter_get();
 
 
@@ -86,7 +89,6 @@ int main() {
     }
 
     result->cycles_cha32 = perfcounter_get() - num_cycles;
-
 
     result->clocks_per_sec = CLOCKS_PER_SEC;
 

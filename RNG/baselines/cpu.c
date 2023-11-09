@@ -6,6 +6,14 @@
 #include "../../includes/rng.c"
 #include "../../includes/results.h"
 
+#ifndef NR_TASKLETS
+#define NR_TASKLETS 16
+#endif
+
+#ifndef N
+#define N 1e7
+#endif
+
 // clock() has problems in parallelism
 // omp_get_wtime() is useful but returns a double which is inconsistent with the result type.
 uint64_t measure_time() {
@@ -13,14 +21,16 @@ uint64_t measure_time() {
 } 
 
 int main() {
-    dpu_results_t DPU_RESULTS;
+    rng_dpu_result DPU_RESULTS;
 
     uint32_t dummy[NR_TASKLETS];
 
     #pragma omp parallel for num_threads(NR_TASKLETS)
     for (unsigned int id = 0; id < NR_TASKLETS; id++) {
+        unsigned seed = id + 1;
+
         dummy[id] = 0;
-        dpu_tasklet_result_t *result = &DPU_RESULTS.tasklet_results[id];
+        rng_tasklet_result *result = &DPU_RESULTS.tasklet_results[id];
 
         result->clocks_per_sec = CLOCKS_PER_SEC;
 
@@ -32,11 +42,11 @@ int main() {
             dummy[id] ^= i;
         }
 
-        result->cycles_null = measure_time() - num_cycles;
+        result->cycles_loop = measure_time() - num_cycles;
         num_cycles = measure_time();
 
 
-        struct xs32 rng_xs32 = seed_xs32(id);
+        struct xs32 rng_xs32 = seed_xs32(seed);
 
         for (int i = 0; i < N; i++) {
             dummy[id] ^= gen_xs32(&rng_xs32);    
@@ -45,7 +55,7 @@ int main() {
         result->cycles_xs32 = measure_time() - num_cycles;
         num_cycles = measure_time();
 
-        struct mt32 rng_mt32 = seed_mt32(id);
+        struct mt32 rng_mt32 = seed_mt32(seed);
 
         for (int i = 0; i < N; i++) {
             dummy[id] ^= gen_mt32(&rng_mt32);    
@@ -54,7 +64,7 @@ int main() {
         result->cycles_mt32 = measure_time() - num_cycles;
         num_cycles = measure_time();
 
-        struct sc32 rng_sc32 = seed_sc32(id);
+        struct sc32 rng_sc32 = seed_sc32(seed);
 
         for (int i = 0; i < N; i++) {
             dummy[id] ^= gen_sc32(&rng_sc32);    
@@ -63,7 +73,7 @@ int main() {
         result->cycles_sc32 = measure_time() - num_cycles;
         num_cycles = measure_time();
 
-        struct lm32 rng_lm32 = seed_lm32(id);
+        struct lm32 rng_lm32 = seed_lm32(seed);
 
         for (int i = 0; i < N; i++) {
             dummy[id] ^= gen_lm32(&rng_lm32);    
@@ -72,7 +82,7 @@ int main() {
         result->cycles_lm32 = measure_time() - num_cycles;
         num_cycles = measure_time();
 
-        struct pcg32 rng_pcg32 = seed_pcg32(id);
+        struct pcg32 rng_pcg32 = seed_pcg32(seed);
 
         for (int i = 0; i < N; i++) {
             dummy[id] ^= gen_pcg32(&rng_pcg32);    
@@ -81,7 +91,7 @@ int main() {
         result->cycles_pcg32 = measure_time() - num_cycles;
         num_cycles = measure_time();
 
-        struct cha32 rng_cha32 = seed_cha32(id);
+        struct cha32 rng_cha32 = seed_cha32(seed);
 
         for (int i = 0; i < N; i++) {
             dummy[id] ^= gen_cha32(&rng_cha32);    
@@ -94,9 +104,9 @@ int main() {
     }
 
     for (unsigned int each_tasklet = 0; each_tasklet < NR_TASKLETS; each_tasklet++) {
-      dpu_tasklet_result_t *result = &DPU_RESULTS.tasklet_results[each_tasklet];
+      rng_tasklet_result *result = &DPU_RESULTS.tasklet_results[each_tasklet];
 
-      printf("cpu,%u,cpu,%u,%lu,%.2e,loop\n", NR_TASKLETS, each_tasklet, result->cycles_null, (double)result->cycles_null / result->clocks_per_sec);
+      printf("cpu,%u,cpu,%u,%lu,%.2e,loop\n", NR_TASKLETS, each_tasklet, result->cycles_loop, (double)result->cycles_loop / result->clocks_per_sec);
       printf("cpu,%u,cpu,%u,%lu,%.2e,xs32\n", NR_TASKLETS, each_tasklet, result->cycles_xs32, (double)result->cycles_xs32 / result->clocks_per_sec);
       printf("cpu,%u,cpu,%u,%lu,%.2e,mt32\n", NR_TASKLETS, each_tasklet, result->cycles_mt32, (double)result->cycles_mt32 / result->clocks_per_sec);
       printf("cpu,%u,cpu,%u,%lu,%.2e,sc32\n", NR_TASKLETS, each_tasklet, result->cycles_sc32, (double)result->cycles_sc32 / result->clocks_per_sec);
