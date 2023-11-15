@@ -14,17 +14,17 @@ __host sampling_dpu_result DPU_RESULTS;
 BARRIER_INIT(my_barrier, NR_TASKLETS);
 
 
-static struct xs32 rngs[NR_TASKLETS];
+static struct pcg32 rngs[NR_TASKLETS];
 
 uint32_t rng32(unsigned id) {
-    return gen_xs32(&rngs[id]);
+    return gen_pcg32(&rngs[id]);
 }
 
 
 int main() {
     uint32_t tasklet_id = me();
-    rngs[tasklet_id] = seed_xs32(tasklet_id + 1);    
-
+    rngs[tasklet_id] = seed_pcg32(tasklet_id + 1);    
+    
     uint32_t dummy = 0;
     sampling_tasklet_result *result = &DPU_RESULTS.tasklet_results[tasklet_id];
 
@@ -78,6 +78,20 @@ int main() {
     }
 
     result->cycles_rr = perfcounter_get() - num_cycles;
+    num_cycles = perfcounter_get();
+
+    for (int i = 2; i < N; i++) {
+        dummy ^= rrb(i, rng32, tasklet_id);  
+    }
+
+    result->cycles_rrb = perfcounter_get() - num_cycles;
+    num_cycles = perfcounter_get();
+
+    for (int i = 2; i < N; i++) {
+        dummy ^= rrf(i, rng32, tasklet_id);  
+    }
+
+    result->cycles_rrf = perfcounter_get() - num_cycles;
 
     result->clocks_per_sec = CLOCKS_PER_SEC;
 

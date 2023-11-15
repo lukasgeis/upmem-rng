@@ -30,6 +30,8 @@ int main() {
       printf("%u,%u,%u,%u,%lu,%.2e,lemire\n", NR_DPUS, NR_TASKLETS, each_dpu, each_tasklet, result->cycles_lemire, (double)result->cycles_lemire / result->clocks_per_sec);
       printf("%u,%u,%u,%u,%lu,%.2e,flips\n", NR_DPUS, NR_TASKLETS, each_dpu, each_tasklet, result->cycles_flips, (double)result->cycles_flips / result->clocks_per_sec);
       printf("%u,%u,%u,%u,%lu,%.2e,rr\n", NR_DPUS, NR_TASKLETS, each_dpu, each_tasklet, result->cycles_rr, (double)result->cycles_rr / result->clocks_per_sec);
+      printf("%u,%u,%u,%u,%lu,%.2e,rrb\n", NR_DPUS, NR_TASKLETS, each_dpu, each_tasklet, result->cycles_rrb, (double)result->cycles_rrb / result->clocks_per_sec);
+      printf("%u,%u,%u,%u,%lu,%.2e,rrf\n", NR_DPUS, NR_TASKLETS, each_dpu, each_tasklet, result->cycles_rrf, (double)result->cycles_rrf / result->clocks_per_sec);
     }
   }
 

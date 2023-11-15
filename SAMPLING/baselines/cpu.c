@@ -89,6 +89,20 @@ int main() {
         }
 
         result->cycles_rr = measure_time() - num_cycles;
+        num_cycles = measure_time();
+
+        for (int i = 2; i < N; i++) {
+            dummy[id] ^= rrb(i, rng32, id);  
+        }
+
+        result->cycles_rrb = measure_time() - num_cycles;
+        num_cycles = measure_time();
+
+        for (int i = 2; i < N; i++) {
+            dummy[id] ^= rrf(i, rng32, id);  
+        }
+
+        result->cycles_rrf = measure_time() - num_cycles;
 
        
         // Prevent Compiler-Optimization of previous Loops
@@ -104,6 +118,8 @@ int main() {
       printf("cpu,%u,cpu,%u,%lu,%.2e,lemire\n", NR_TASKLETS, each_tasklet, result->cycles_lemire, (double)result->cycles_lemire / result->clocks_per_sec);
       printf("cpu,%u,cpu,%u,%lu,%.2e,flips\n", NR_TASKLETS, each_tasklet, result->cycles_flips, (double)result->cycles_flips / result->clocks_per_sec);
       printf("cpu,%u,cpu,%u,%lu,%.2e,rr\n", NR_TASKLETS, each_tasklet, result->cycles_rr, (double)result->cycles_rr / result->clocks_per_sec);
+      printf("cpu,%u,cpu,%u,%lu,%.2e,rrb\n", NR_TASKLETS, each_tasklet, result->cycles_rrb, (double)result->cycles_rrb / result->clocks_per_sec);
+      printf("cpu,%u,cpu,%u,%lu,%.2e,rrf\n", NR_TASKLETS, each_tasklet, result->cycles_rrf, (double)result->cycles_rrf / result->clocks_per_sec);
     }
 
     return 0;
