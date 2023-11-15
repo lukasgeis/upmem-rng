@@ -62,14 +62,14 @@ int main() {
   }
 
   for (unsigned int each_tasklet = 0; each_tasklet < NR_TASKLETS; each_tasklet++) {
-    printf("%u,%.2e,loop\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_loop);
-    printf("%u,%.2e,openbsd\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_openbsd);
-    printf("%u,%.2e,java\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_java);
-    printf("%u,%.2e,lemire\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_lemire);
-    printf("%u,%.2e,flips\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_flips);
-    printf("%u,%.2e,rr\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_rr);
-    printf("%u,%.2e,rrb\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_rrb);
-    printf("%u,%.2e,rrf\n", each_tasklet, host_results.tasklet_results[each_tasklet].time_rrf);
+    printf("dpu,%u,%u,%.2e,loop\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_loop);
+    printf("dpu,%u,%u,%.2e,openbsd\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_openbsd);
+    printf("dpu,%u,%u,%.2e,java\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_java);
+    printf("dpu,%u,%u,%.2e,lemire\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_lemire);
+    printf("dpu,%u,%u,%.2e,flips\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_flips);
+    printf("dpu,%u,%u,%.2e,rr\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_rr);
+    printf("dpu,%u,%u,%.2e,rrb\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_rrb);
+    printf("dpu,%u,%u,%.2e,rrf\n", NR_TASKLETS, each_tasklet, host_results.tasklet_results[each_tasklet].time_rrf);
   }
 
 
