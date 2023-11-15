@@ -1,16 +1,14 @@
 import os
 import argparse
 
-N = "1e4"
-
-MAKE_CMD = "NR_DPUS=X NR_TASKLETS=Y N={} make dpu".format(N)
-CPU_MAKE_CMD = "NR_TASKLETS=X N={} make cpu".format(N)
+MAKE_CMD = "NR_DPUS=X NR_TASKLETS=Y N=1e9 make dpu"
+CPU_MAKE_CMD = "NR_TASKLETS=X N=1e8 make cpu"
 DPU_RUN_CMD = "./bin/host >> X"
 CPU_RUN_CMD = "./bin/cpu >> X"
 
 EXP_PARAMS = {
     "RNG": ("nr_dpu,nr_tasklet,dpu_id,tasklet_id,cycles,time,algorithm"),
-    "SAMPLING": ("tasklet_id,time,algorithm")
+    "SAMPLING": ("target,nr_tasklets,tasklet_id,time,algorithm")
 }
 
 def main():
@@ -66,7 +64,10 @@ def main():
             os.system(run_dpu)
 
             if args.cpu:
-                make = CPU_MAKE_CMD.replace("X", str(nr_dpus * nr_task))
+                cpu_nr_tasks = nr_dpus * nr_task
+                if args.experiment == "SAMPLING":
+                    cpu_nr_tasks = nr_task
+                make = CPU_MAKE_CMD.replace("X", str(cpu_nr_tasks))
 
                 os.system("make clean")
                 os.system(make)
