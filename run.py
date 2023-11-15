@@ -1,7 +1,7 @@
 import os
 import argparse
 
-N = "1e9"
+N = "1e4"
 
 MAKE_CMD = "NR_DPUS=X NR_TASKLETS=Y N={} make dpu".format(N)
 CPU_MAKE_CMD = "NR_TASKLETS=X N={} make cpu".format(N)
@@ -10,7 +10,7 @@ CPU_RUN_CMD = "./bin/cpu >> X"
 
 EXP_PARAMS = {
     "RNG": ("nr_dpu,nr_tasklet,dpu_id,tasklet_id,cycles,time,algorithm"),
-    "SAMPLING": ("nr_dpu,nr_tasklet,dpu_id,tasklet_id,cycles,time,algorithm")
+    "SAMPLING": ("tasklet_id,time,algorithm")
 }
 
 def main():
@@ -44,6 +44,9 @@ def main():
     if not args.dlinear:
         dpus = [1 << i for i in dpus]
     
+    if args.experiment == "SAMPLING":
+        dpus = [args.dpus]
+
     tasks = [i for i in range(args.tasks+ 1)]
     if not args.tlinear:
         tasks = [1 << i for i in tasks]

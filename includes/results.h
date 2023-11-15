@@ -32,6 +32,8 @@ typedef struct {
     uint64_t cycles_lemire;
     uint64_t cycles_flips;
     uint64_t cycles_rr;
+    uint64_t cycles_rrb;
+    uint64_t cycles_rrf;
     uint64_t clocks_per_sec;
 
     // Prevent Compiler-Optimization
@@ -41,3 +43,18 @@ typedef struct {
 typedef struct {
     sampling_tasklet_result tasklet_results[NR_TASKLETS];
 } sampling_dpu_result;
+
+typedef struct {
+    double time_loop;
+    double time_openbsd;
+    double time_java;
+    double time_lemire;
+    double time_flips;
+    double time_rr;
+    double time_rrb;
+    double time_rrf;
+} sampling_host_tasklet_result;
+
+typedef struct {
+    sampling_host_tasklet_result tasklet_results[NR_TASKLETS];
+} sampling_host_result;
