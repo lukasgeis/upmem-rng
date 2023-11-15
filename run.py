@@ -1,8 +1,10 @@
 import os
 import argparse
 
-MAKE_CMD = "NR_DPUS=X NR_TASKLETS=Y N=1e9 make dpu"
-CPU_MAKE_CMD = "NR_TASKLETS=X N=1e8 make cpu"
+N = "1e9"
+
+MAKE_CMD = "NR_DPUS=X NR_TASKLETS=Y N={} make dpu".format(N)
+CPU_MAKE_CMD = "NR_TASKLETS=X N={} make cpu".format(N)
 DPU_RUN_CMD = "./bin/host >> X"
 CPU_RUN_CMD = "./bin/cpu >> X"
 
