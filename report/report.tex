@@ -71,8 +71,8 @@
 
 \newpage
 \section{Introduction} \label{sec:1}
-A \emph{Pseudo}-\textsc{RandomNumberGenerator} (\textsc{Rng}) is the core of all random functionality in practice.
-We can generate a series of (\emph{pseudo}) random numbers to simulate \emph{true} randomness to a certain degree in practice.
+A \emph{Pseudo}-\textsc{RandomNumberGenerator} (\textsc{Rng}) is the basis of all random functionality in practice.
+We can generate a series of (\emph{pseudo}) random numbers to simulate \emph{true} randomness to a certain degree.
 This way, we can create random models to create diverse data sets or approximate complex problems efficiently.
 
 The \textsc{Upmem-Pim}\footnote{\url{https://www.upmem.com/}} architecture is the first publicly-available real-world processing-in-memory (\textsc{Pim}) architecture.
@@ -453,17 +453,8 @@ Here, Lemire performs the best, followed by Java, RR, RRF, and RRB.
 When using the PCG-\textsc{Rng}, only Java and RR perform quite well while the rest is way worse (and shaky). 
 This might be due to some external issues (like Power-Management, etc.), but it was not studied and should be ignore instead as it is of no significant importance in this research project.
 
-
-\section{Outlook}
-Since we can now efficiently generate not only random $32$-bit integers but also uniform random integers in an interval $[0,s)$, the next step would be to use this to find the most efficient implementations of standard random algorithms such as shuffling or sampling from a set of items.
-
-One could also look into basic random data models such as the $\mathcal{G}(n,p)$ or $\mathcal{G}(n,m)$ model for generating random graphs.
-Generally, this can be the starting point for all kinds of randomized algorithms run on the DPU.
-
-
-
-\clearpage
 \printbibliography
 
 
 \end{document}
+
