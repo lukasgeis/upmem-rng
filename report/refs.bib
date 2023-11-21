@@ -1,0 +1,128 @@
+@article{XS,
+    title={Xorshift RNGs},
+    volume={8},
+    url={https://www.jstatsoft.org/index.php/jss/article/view/v008i14},
+    doi={10.18637/jss.v008.i14},
+    abstract={Description of a class of simple, extremely fast random number generators (RNGs) with periods 2k - 1 for k = 32, 64, 96, 128, 160, 192. These RNGs seem to pass tests of randomness very well.},
+    number={14},
+    journal={Journal of Statistical Software},
+    author={Marsaglia, George},
+    year={2003},
+    pages={1-6}
+}
+
+@article{MT,
+    author = {Matsumoto, Makoto and Nishimura, Takuji},
+    title = {Mersenne Twister: A 623-Dimensionally Equidistributed Uniform Pseudo-Random Number Generator},
+    year = {1998},
+    issue_date = {Jan. 1998},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {8},
+    number = {1},
+    issn = {1049-3301},
+    url = {https://doi.org/10.1145/272991.272995},
+    doi = {10.1145/272991.272995},
+    abstract = {A new algorithm called Mersenne Twister (MT) is proposed for generating uniform pseudorandom numbers. For a particular choice of parameters, the algorithm provides a super astronomical period of 219937 −1 and 623-dimensional equidistribution up to 32-bit accuracy, while using a working area of only 624 words. This is a new variant of the previously proposed generators, TGFSR, modified so as to admit a Mersenne-prime period. The characteristic polynomial has many terms. The distribution up to v bits accuracy for 1 ≤ v ≤ 32 is also shown to be good. An algorithm is also given that checks the primitivity of the characteristic polynomial of MT with computational complexity O(p2) where  p is the degree of the polynomial.We implemented this generator in portable C-code. It passed several stringent statistical tests, including diehard. Its speed is comparable to other modern generators. Its merits are due to the efficient algorithms that are unique to polynomial calculations over the two-element field.},
+    journal = {ACM Trans. Model. Comput. Simul.},
+    month = {jan},
+    pages = {3-30},
+    numpages = {28},
+    keywords = {primitive polynomials, Mersenne twister, GFSR, incomplete array, inversive-decimation method, MT19937, m-sequences, tempering, TGFSR, finite fields, k-distribution, random number generation, multiple-recursive matrix method, Mersenne primes}
+}
+
+@article{SC,
+    author = {George Marsaglia and Arif Zaman},
+    title = {{A New Class of Random Number Generators}},
+    volume = {1},
+    journal = {The Annals of Applied Probability},
+    number = {3},
+    publisher = {Institute of Mathematical Statistics},
+    pages = {462 -- 480},
+    keywords = {add-with-carry, lagged-Fibonacci, Monte Carlo, Random number generators, subtract-with-borrow},
+    year = {1991},
+    doi = {10.1214/aoap/1177005878},
+    URL = {https://doi.org/10.1214/aoap/1177005878}
+}
+
+@article{LM,
+    author = {Payne, W. H. and Rabung, J. R. and Bogyo, T. P.},
+    title = {Coding the Lehmer Pseudo-Random Number Generator},
+    year = {1969},
+    issue_date = {Feb. 1969},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {12},
+    number = {2},
+    issn = {0001-0782},
+    url = {https://doi.org/10.1145/362848.362860},
+    doi = {10.1145/362848.362860},
+    abstract = {An algorithm and coding technique is presented for quick evaluation of the Lehmer pseudo-random number generator modulo 2 ** 31 - 1, a prime Mersenne number which produces 2 ** 31 - 2 numbers, on a p-bit (greater than 31) computer. The computation method is extendible to limited problems in modular arithmetic. Prime factorization for 2 ** 61 - 2 and a primitive root for 2 ** 61 - 1, the next largest prime Mersenne number, are given for possible construction of a pseudo-random number generator of increased cycle length.},
+    journal = {Commun. ACM},
+    month = {feb},
+    pages = {85-86},
+    numpages = {2},
+    keywords = {simulation, uniform probability density, primitive roots, modular arithmetic, prime factorization, random number, pseudo-random number, uniform frequency function}
+}
+
+@article{MINSTD,
+    author = {Park, S. K. and Miller, K. W.},
+    title = {Random Number Generators: Good Ones Are Hard to Find},
+    year = {1988},
+    issue_date = {Oct. 1988},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {31},
+    number = {10},
+    issn = {0001-0782},
+    url = {https://doi.org/10.1145/63039.63042},
+    doi = {10.1145/63039.63042},
+    abstract = {Practical and theoretical issues are presented concerning the design, implementation, and use of a good, minimal standard random number generator that will port to virtually all systems.},
+    journal = {Commun. ACM},
+    month = {oct},
+    pages = {1192-1201},
+    numpages = {10}
+}
+
+@techreport{PCG,
+    title = "PCG: A Family of Simple Fast Space-Efficient Statistically Good Algorithms for Random Number Generation",
+    author = "Melissa E. O'Neill",
+    institution = "Harvey Mudd College",
+    address = "Claremont, CA",
+    number = "HMC-CS-2014-0905",
+    year = "2014",
+    month = Sep,
+    xurl = "https://www.cs.hmc.edu/tr/hmc-cs-2014-0905.pdf",
+}
+
+@techreport{CHA,
+    author      = "Daniel J. Bernstein",
+    institution = "The University of Illinois at Chicago",
+    title       = "ChaCha, a variant of Salsa20",
+    year        = "2008",
+    xurl        = "https://cr.yp.to/chacha.html"
+}
+
+
+@article{Lemire,
+   title={Fast Random Integer Generation in an Interval},
+   volume={29},
+   ISSN={1558-1195},
+   url={http://dx.doi.org/10.1145/3230636},
+   DOI={10.1145/3230636},
+   number={1},
+   journal={ACM Transactions on Modeling and Computer Simulation},
+   publisher={Association for Computing Machinery (ACM)},
+   author={Lemire, Daniel},
+   year={2019},
+   month=jan, pages={1-12}
+}
+
+@misc{Flips,
+      title={Optimal Discrete Uniform Generation from Coin Flips, and Applications}, 
+      author={Jérémie Lumbroso},
+      year={2013},
+      eprint={1304.1916},
+      archivePrefix={arXiv},
+      primaryClass={cs.DS}
+}

@@ -1,0 +1,380 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{CHA}{report}{}
+      \name{author}{1}{}{%
+        {{hash=cc77f8b5fa3840f90938819e591aae07}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {The University of Illinois at Chicago}%
+      }
+      \strng{namehash}{cc77f8b5fa3840f90938819e591aae07}
+      \strng{fullhash}{cc77f8b5fa3840f90938819e591aae07}
+      \strng{bibnamehash}{cc77f8b5fa3840f90938819e591aae07}
+      \strng{authorbibnamehash}{cc77f8b5fa3840f90938819e591aae07}
+      \strng{authornamehash}{cc77f8b5fa3840f90938819e591aae07}
+      \strng{authorfullhash}{cc77f8b5fa3840f90938819e591aae07}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ChaCha, a variant of Salsa20}
+      \field{type}{techreport}
+      \field{year}{2008}
+    \endentry
+    \entry{Lemire}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1f6f9e460dc1dd070b39d99017deb2c5}{%
+           family={Lemire},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery (ACM)}%
+      }
+      \strng{namehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{fullhash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{bibnamehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{authorbibnamehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{authornamehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{authorfullhash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-1195}
+      \field{journaltitle}{ACM Transactions on Modeling and Computer Simulation}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Fast Random Integer Generation in an Interval}
+      \field{volume}{29}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/3230636
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1145/3230636
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1145/3230636
+      \endverb
+    \endentry
+    \entry{Flips}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f4128acb7e983bfadfb111bab525519e}{%
+           family={Lumbroso},
+           familyi={L\bibinitperiod},
+           given={Jérémie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4128acb7e983bfadfb111bab525519e}
+      \strng{fullhash}{f4128acb7e983bfadfb111bab525519e}
+      \strng{bibnamehash}{f4128acb7e983bfadfb111bab525519e}
+      \strng{authorbibnamehash}{f4128acb7e983bfadfb111bab525519e}
+      \strng{authornamehash}{f4128acb7e983bfadfb111bab525519e}
+      \strng{authorfullhash}{f4128acb7e983bfadfb111bab525519e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.DS}
+      \field{eprinttype}{arXiv}
+      \field{title}{Optimal Discrete Uniform Generation from Coin Flips, and Applications}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1304.1916
+      \endverb
+    \endentry
+    \entry{XS}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4a0a18148bcc65f1061ef2bd5c351471}{%
+           family={Marsaglia},
+           familyi={M\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a0a18148bcc65f1061ef2bd5c351471}
+      \strng{fullhash}{4a0a18148bcc65f1061ef2bd5c351471}
+      \strng{bibnamehash}{4a0a18148bcc65f1061ef2bd5c351471}
+      \strng{authorbibnamehash}{4a0a18148bcc65f1061ef2bd5c351471}
+      \strng{authornamehash}{4a0a18148bcc65f1061ef2bd5c351471}
+      \strng{authorfullhash}{4a0a18148bcc65f1061ef2bd5c351471}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Description of a class of simple, extremely fast random number generators (RNGs) with periods 2k - 1 for k = 32, 64, 96, 128, 160, 192. These RNGs seem to pass tests of randomness very well.}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{number}{14}
+      \field{title}{Xorshift RNGs}
+      \field{volume}{8}
+      \field{year}{2003}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.18637/jss.v008.i14
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstatsoft.org/index.php/jss/article/view/v008i14
+      \endverb
+      \verb{url}
+      \verb https://www.jstatsoft.org/index.php/jss/article/view/v008i14
+      \endverb
+    \endentry
+    \entry{SC}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4a0a18148bcc65f1061ef2bd5c351471}{%
+           family={Marsaglia},
+           familyi={M\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=cc7138348a852912092794d101195811}{%
+           family={Zaman},
+           familyi={Z\bibinitperiod},
+           given={Arif},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{271124497d4f9cf9cfe41dcb3ba06a47}
+      \strng{fullhash}{271124497d4f9cf9cfe41dcb3ba06a47}
+      \strng{bibnamehash}{271124497d4f9cf9cfe41dcb3ba06a47}
+      \strng{authorbibnamehash}{271124497d4f9cf9cfe41dcb3ba06a47}
+      \strng{authornamehash}{271124497d4f9cf9cfe41dcb3ba06a47}
+      \strng{authorfullhash}{271124497d4f9cf9cfe41dcb3ba06a47}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Applied Probability}
+      \field{number}{3}
+      \field{title}{{A New Class of Random Number Generators}}
+      \field{volume}{1}
+      \field{year}{1991}
+      \field{pages}{462\bibrangedash 480}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1214/aoap/1177005878
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/aoap/1177005878
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/aoap/1177005878
+      \endverb
+      \keyw{add-with-carry,lagged-Fibonacci,Monte Carlo,Random number generators,subtract-with-borrow}
+    \endentry
+    \entry{MT}{article}{}
+      \name{author}{2}{}{%
+        {{hash=37a788e3dbb975370d88203dfba379ec}{%
+           family={Matsumoto},
+           familyi={M\bibinitperiod},
+           given={Makoto},
+           giveni={M\bibinitperiod}}}%
+        {{hash=88d8b870701ad221060b0c7ef21a2df8}{%
+           family={Nishimura},
+           familyi={N\bibinitperiod},
+           given={Takuji},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{adc651ab76aa3abcc9d94787b0adae82}
+      \strng{fullhash}{adc651ab76aa3abcc9d94787b0adae82}
+      \strng{bibnamehash}{adc651ab76aa3abcc9d94787b0adae82}
+      \strng{authorbibnamehash}{adc651ab76aa3abcc9d94787b0adae82}
+      \strng{authornamehash}{adc651ab76aa3abcc9d94787b0adae82}
+      \strng{authorfullhash}{adc651ab76aa3abcc9d94787b0adae82}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new algorithm called Mersenne Twister (MT) is proposed for generating uniform pseudorandom numbers. For a particular choice of parameters, the algorithm provides a super astronomical period of 219937 −1 and 623-dimensional equidistribution up to 32-bit accuracy, while using a working area of only 624 words. This is a new variant of the previously proposed generators, TGFSR, modified so as to admit a Mersenne-prime period. The characteristic polynomial has many terms. The distribution up to v bits accuracy for 1 ≤ v ≤ 32 is also shown to be good. An algorithm is also given that checks the primitivity of the characteristic polynomial of MT with computational complexity O(p2) where p is the degree of the polynomial.We implemented this generator in portable C-code. It passed several stringent statistical tests, including diehard. Its speed is comparable to other modern generators. Its merits are due to the efficient algorithms that are unique to polynomial calculations over the two-element field.}
+      \field{issn}{1049-3301}
+      \field{journaltitle}{ACM Trans. Model. Comput. Simul.}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Mersenne Twister: A 623-Dimensionally Equidistributed Uniform Pseudo-Random Number Generator}
+      \field{volume}{8}
+      \field{year}{1998}
+      \field{pages}{3\bibrangedash 30}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1145/272991.272995
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/272991.272995
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/272991.272995
+      \endverb
+      \keyw{primitive polynomials,Mersenne twister,GFSR,incomplete array,inversive-decimation method,MT19937,m-sequences,tempering,TGFSR,finite fields,k-distribution,random number generation,multiple-recursive matrix method,Mersenne primes}
+    \endentry
+    \entry{PCG}{report}{}
+      \name{author}{1}{}{%
+        {{hash=c9d4543de8e5e02759f960ce07428cec}{%
+           family={O'Neill},
+           familyi={O\bibinitperiod},
+           given={Melissa\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Harvey Mudd College}%
+      }
+      \list{location}{1}{%
+        {Claremont, CA}%
+      }
+      \strng{namehash}{c9d4543de8e5e02759f960ce07428cec}
+      \strng{fullhash}{c9d4543de8e5e02759f960ce07428cec}
+      \strng{bibnamehash}{c9d4543de8e5e02759f960ce07428cec}
+      \strng{authorbibnamehash}{c9d4543de8e5e02759f960ce07428cec}
+      \strng{authornamehash}{c9d4543de8e5e02759f960ce07428cec}
+      \strng{authorfullhash}{c9d4543de8e5e02759f960ce07428cec}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{number}{HMC-CS-2014-0905}
+      \field{title}{PCG: A Family of Simple Fast Space-Efficient Statistically Good Algorithms for Random Number Generation}
+      \field{type}{techreport}
+      \field{year}{2014}
+    \endentry
+    \entry{MINSTD}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ec89409b9a8a6e1eadac1ddd33773145}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={S.\bibnamedelimi K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=903276ef6a84da68e9539a4b28caa043}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{696c81cdc14afd77f8818d7a40edd01a}
+      \strng{fullhash}{696c81cdc14afd77f8818d7a40edd01a}
+      \strng{bibnamehash}{696c81cdc14afd77f8818d7a40edd01a}
+      \strng{authorbibnamehash}{696c81cdc14afd77f8818d7a40edd01a}
+      \strng{authornamehash}{696c81cdc14afd77f8818d7a40edd01a}
+      \strng{authorfullhash}{696c81cdc14afd77f8818d7a40edd01a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Practical and theoretical issues are presented concerning the design, implementation, and use of a good, minimal standard random number generator that will port to virtually all systems.}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{Random Number Generators: Good Ones Are Hard to Find}
+      \field{volume}{31}
+      \field{year}{1988}
+      \field{pages}{1192\bibrangedash 1201}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/63039.63042
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/63039.63042
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/63039.63042
+      \endverb
+    \endentry
+    \entry{LM}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9e04f9e19a0605ab171680c1c536fa89}{%
+           family={Payne},
+           familyi={P\bibinitperiod},
+           given={W.\bibnamedelimi H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=641e85ac85ae99027292ee6bd2c1f4c7}{%
+           family={Rabung},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=dbcfc105897e2e766dd9ece8fd724060}{%
+           family={Bogyo},
+           familyi={B\bibinitperiod},
+           given={T.\bibnamedelimi P.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{f8b2f6b3731294fc27a440776c9ea42e}
+      \strng{fullhash}{f8b2f6b3731294fc27a440776c9ea42e}
+      \strng{bibnamehash}{f8b2f6b3731294fc27a440776c9ea42e}
+      \strng{authorbibnamehash}{f8b2f6b3731294fc27a440776c9ea42e}
+      \strng{authornamehash}{f8b2f6b3731294fc27a440776c9ea42e}
+      \strng{authorfullhash}{f8b2f6b3731294fc27a440776c9ea42e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An algorithm and coding technique is presented for quick evaluation of the Lehmer pseudo-random number generator modulo 2 ** 31 - 1, a prime Mersenne number which produces 2 ** 31 - 2 numbers, on a p-bit (greater than 31) computer. The computation method is extendible to limited problems in modular arithmetic. Prime factorization for 2 ** 61 - 2 and a primitive root for 2 ** 61 - 1, the next largest prime Mersenne number, are given for possible construction of a pseudo-random number generator of increased cycle length.}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Coding the Lehmer Pseudo-Random Number Generator}
+      \field{volume}{12}
+      \field{year}{1969}
+      \field{pages}{85\bibrangedash 86}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/362848.362860
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/362848.362860
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/362848.362860
+      \endverb
+      \keyw{simulation,uniform probability density,primitive roots,modular arithmetic,prime factorization,random number,pseudo-random number,uniform frequency function}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
